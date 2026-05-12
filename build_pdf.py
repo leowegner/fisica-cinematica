@@ -240,7 +240,7 @@ p1_items = [
     (
         "T",
         "Define con precisión los conceptos de <b>vector de posición " + vec("r") + "</b>, "
-        "<b>desplazamiento " + vec("ΔL") + "</b> y <b>espacio recorrido (s)</b>. "
+        "<b>desplazamiento " + vec("Δr") + "</b> y <b>espacio recorrido Δs</b>. "
         "Explica, mediante un dibujo esquemático, en qué caso particular el módulo "
         "del desplazamiento coincide con el espacio recorrido y por qué."
     ),
@@ -525,14 +525,14 @@ p3_items = [
     ),
     (
         "P",
-        "Calcula el <b>desplazamiento total</b> " + vec("Δx") + " del móvil entre el "
+        "Calcula el <b>desplazamiento total</b> " + vec("Δr") + " del móvil entre el "
         "instante inicial (punto A, <i>t</i> = 0 s) y el final (punto E, <i>t</i> = 14 s). "
         "Indica también si el desplazamiento entre A y D es igual al desplazamiento "
         "entre A y E, razonando la respuesta."
     ),
     (
         "P",
-        "Calcula el <b>espacio recorrido</b> total <i>s</i> entre A y E. Explica por qué, "
+        "Calcula el <b>espacio recorrido</b> total <b>Δs</b> entre A y E. Explica por qué, "
         "en este movimiento, el espacio recorrido <b>no coincide</b> con el módulo "
         "del desplazamiento."
     ),
