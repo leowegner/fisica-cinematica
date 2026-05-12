@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Examen de Cinemática</title>
+<style>
+  @page {
+    size: A4;
+    margin: 2cm 2cm 2.2cm 2cm;
+    @bottom-center {
+      content: "Página " counter(page) " de " counter(pages);
+      font-size: 9pt;
+      color: #6c757d;
+      font-family: Georgia, serif;
+    }
+    @top-right {
+      content: "Cinemática · 1º Bachillerato";
+      font-size: 9pt;
+      color: #6c757d;
+      font-family: Georgia, serif;
+    }
+  }
+
+  body {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 11pt;
+    color: #212529;
+    line-height: 1.45;
+  }
+
+  h1 {
+    font-size: 22pt;
+    text-align: center;
+    margin: 0 0 0.2em 0;
+    color: #1864ab;
+    border-bottom: 2px solid #1864ab;
+    padding-bottom: 0.3em;
+  }
+  .subtitle {
+    text-align: center;
+    color: #495057;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 1.4em;
+  }
+
+  .meta {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5em;
+    font-size: 10pt;
+  }
+  .meta div {
+    display: table-cell;
+    border: 1px solid #adb5bd;
+    padding: 6pt 8pt;
+  }
+
+  .instr {
+    background: #f1f3f5;
+    border-left: 4px solid #1864ab;
+    padding: 8pt 12pt;
+    margin-bottom: 1.4em;
+    font-size: 10.5pt;
+  }
+  .instr strong { color: #1864ab; }
+
+  h2.problem {
+    font-size: 14pt;
+    color: #c92a2a;
+    margin-top: 1.6em;
+    margin-bottom: 0.4em;
+    border-bottom: 1.5px solid #c92a2a;
+    padding-bottom: 0.2em;
+    page-break-after: avoid;
+  }
+
+  .context {
+    background: #fff9db;
+    border: 1px solid #fab005;
+    border-radius: 4px;
+    padding: 8pt 12pt;
+    margin-bottom: 1em;
+    font-size: 10.5pt;
+  }
+
+  ol.subapartados {
+    padding-left: 1.4em;
+    margin-top: 0.4em;
+  }
+  ol.subapartados > li {
+    margin-bottom: 0.9em;
+    padding-left: 0.3em;
+  }
+  ol.subapartados > li::marker {
+    font-weight: bold;
+    color: #1864ab;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 8.5pt;
+    padding: 1pt 6pt;
+    border-radius: 3px;
+    margin-right: 4pt;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  .tag.t { background: #d0ebff; color: #1864ab; }
+  .tag.p { background: #d3f9d8; color: #2b8a3e; }
+
+  .pts {
+    float: right;
+    font-size: 9.5pt;
+    color: #6c757d;
+    font-style: italic;
+  }
+
+  .formula {
+    font-style: italic;
+    background: #f8f9fa;
+    padding: 1pt 5pt;
+    border-radius: 3px;
+    font-family: "Cambria Math", Georgia, serif;
+  }
+
+  .vec { font-weight: bold; }
+  .vec::after { content: "→"; font-size: 0.7em; vertical-align: super; }
+
+  table.data {
+    border-collapse: collapse;
+    margin: 6pt 0;
+    font-size: 10pt;
+  }
+  table.data th, table.data td {
+    border: 1px solid #adb5bd;
+    padding: 4pt 10pt;
+    text-align: center;
+  }
+  table.data th {
+    background: #e9ecef;
+  }
+
+  .footer-note {
+    margin-top: 2.2em;
+    padding-top: 0.8em;
+    border-top: 1px dashed #adb5bd;
+    font-size: 9.5pt;
+    color: #495057;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .nobreak { page-break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<h1>Examen de Cinemática</h1>
+<p class="subtitle">Física · 1º de Bachillerato</p>
+
+<div class="meta">
+  <div><strong>Nombre y apellidos:</strong> ____________________________________</div>
+  <div><strong>Fecha:</strong> ___________</div>
+  <div><strong>Calificación:</strong> ____ / 10</div>
+</div>
+
+<div class="instr">
+  <strong>Instrucciones.</strong> El examen consta de <strong>2 problemas</strong>, cada uno con <strong>5 subapartados</strong>. Cada subapartado vale <strong>1 punto</strong> (10 en total). Justifica todas las respuestas teóricas y muestra el procedimiento completo en los apartados de aplicación práctica, indicando claramente las unidades en el Sistema Internacional. La etiqueta <span class="tag t">TEORÍA</span> indica preguntas conceptuales y <span class="tag p">PRÁCTICA</span> indica ejercicios numéricos.
+</div>
+
+<!-- =================== PROBLEMA 1 =================== -->
+<h2 class="problem">Problema 1 — Conceptos fundamentales, posición y velocidad</h2>
+
+<div class="context">
+  <strong>Enunciado.</strong> Un ciclista circula por una pista. Su posición a lo largo de un eje recto viene dada por las siguientes mediciones, tomadas con un sistema de referencia fijo en la línea de salida:
+  <table class="data">
+    <tr><th>t (s)</th><td>0</td><td>2</td><td>5</td><td>8</td><td>12</td></tr>
+    <tr><th>x (m)</th><td>0</td><td>10</td><td>28</td><td>52</td><td>96</td></tr>
+  </table>
+  Más adelante, el ciclista entra en una <strong>curva de radio R = 20 m</strong> manteniendo el módulo de la velocidad alcanzada en el instante <em>t</em> = 12 s.
+</div>
+
+<ol class="subapartados">
+
+  <li>
+    <span class="tag t">TEORÍA</span> <span class="pts">(1 punto)</span>
+    Enumera y define brevemente los <strong>tres elementos fundamentales</strong> que necesitamos para estudiar el movimiento de un cuerpo. Justifica además, con un ejemplo cotidiano, la afirmación: <em>«no existe el movimiento absoluto, sólo el relativo»</em>.
+  </li>
+
+  <li>
+    <span class="tag t">TEORÍA</span> <span class="pts">(1 punto)</span>
+    Define con precisión los conceptos de <strong>vector de posición <span class="vec">r</span></strong>, <strong>desplazamiento <span class="vec">ΔL</span></strong> y <strong>espacio recorrido (s)</strong>. Explica, mediante un dibujo esquemático, en qué caso particular el módulo del desplazamiento coincide con el espacio recorrido y por qué.
+  </li>
+
+  <li>
+    <span class="tag p">PRÁCTICA</span> <span class="pts">(1 punto)</span>
+    A partir de la tabla, calcula la <strong>velocidad media</strong> del ciclista en los siguientes intervalos:
+    <ul style="margin-top:4pt;">
+      <li>(a) entre <em>t</em> = 0 s y <em>t</em> = 5 s,</li>
+      <li>(b) entre <em>t</em> = 5 s y <em>t</em> = 12 s,</li>
+      <li>(c) en el intervalo total (0–12 s).</li>
+    </ul>
+    Expresa los resultados en m/s y en km/h.
+  </li>
+
+  <li>
+    <span class="tag p">PRÁCTICA</span> <span class="pts">(1 punto)</span>
+    Razona si el movimiento del ciclista entre 0 s y 12 s puede considerarse uniforme. ¿Es la <strong>velocidad media</strong> del intervalo total igual a la <strong>media aritmética</strong> de las velocidades medias de los apartados (a) y (b)? Explica matemáticamente por qué.
+  </li>
+
+  <li>
+    <span class="tag p">PRÁCTICA</span> <span class="pts">(1 punto)</span>
+    Suponiendo que en <em>t</em> = 12 s el ciclista entra en la curva de radio <em>R</em> = 20 m manteniendo el módulo de la velocidad media calculada entre <em>t</em> = 8 s y <em>t</em> = 12 s, calcula el módulo de la <strong>aceleración centrípeta</strong>. Indica además su dirección y sentido sobre un esquema.
+  </li>
+
+</ol>
+
+<!-- =================== PROBLEMA 2 =================== -->
+<h2 class="problem">Problema 2 — Aceleración y sus componentes intrínsecas</h2>
+
+<div class="context">
+  <strong>Enunciado.</strong> Un coche entra en una rotonda circular de <strong>radio R = 25 m</strong>. En el instante inicial (<em>t</em><sub>0</sub> = 0) lleva una velocidad de módulo <em>v</em><sub>0</sub> = 10 m/s, y al cabo de <em>t</em> = 5 s su velocidad ha aumentado uniformemente hasta <em>v</em> = 20 m/s, conservando el mismo sentido de giro. Considera el movimiento contenido en un plano horizontal.
+</div>
+
+<ol class="subapartados">
+
+  <li>
+    <span class="tag t">TEORÍA</span> <span class="pts">(1 punto)</span>
+    Define el concepto de <strong>aceleración</strong> como magnitud vectorial. Distingue entre <strong>aceleración media</strong> y <strong>aceleración instantánea</strong>, escribiendo la expresión matemática correspondiente y explicando el significado físico de cada una.
+  </li>
+
+  <li>
+    <span class="tag t">TEORÍA</span> <span class="pts">(1 punto)</span>
+    Explica qué son las <strong>componentes intrínsecas</strong> de la aceleración: <strong>tangencial <span class="vec">a</span><sub>t</sub></strong> y <strong>centrípeta (o normal) <span class="vec">a</span><sub>c</sub></strong>. Indica para cada una su <em>dirección</em>, su <em>sentido</em> y qué <em>cambio físico</em> en el vector velocidad mide. Razona por qué en un movimiento rectilíneo uniforme ambas son nulas.
+  </li>
+
+  <li>
+    <span class="tag p">PRÁCTICA</span> <span class="pts">(1 punto)</span>
+    Calcula el módulo de la <strong>aceleración tangencial</strong> del coche durante el intervalo de 0 a 5 s. Razona, basándote en el sentido de <span class="vec">a</span><sub>t</sub> respecto al de <span class="vec">v</span>, si el coche está acelerando o frenando.
+  </li>
+
+  <li>
+    <span class="tag p">PRÁCTICA</span> <span class="pts">(1 punto)</span>
+    Calcula el módulo de la <strong>aceleración centrípeta</strong> en los instantes <em>t</em> = 0 s y <em>t</em> = 5 s. ¿Es constante? Justifica el resultado utilizando la fórmula <span class="formula">a<sub>c</sub> = v² / R</span>.
+  </li>
+
+  <li>
+    <span class="tag p">PRÁCTICA</span> <span class="pts">(1 punto)</span>
+    En el instante <em>t</em> = 5 s, dibuja en un esquema la rotonda con el coche, el vector velocidad <span class="vec">v</span> y los vectores <span class="vec">a</span><sub>t</sub> y <span class="vec">a</span><sub>c</sub>. Calcula a continuación el <strong>módulo de la aceleración total</strong> en ese instante (composición de <span class="vec">a</span><sub>t</sub> y <span class="vec">a</span><sub>c</sub>, que son perpendiculares entre sí) y el <strong>ángulo</strong> que dicho vector forma con la dirección de la velocidad.
+  </li>
+
+</ol>
+
+<div class="footer-note">
+  Fin del examen · Revisa todos tus cálculos y las unidades antes de entregar · ¡Mucho ánimo!
+</div>
+
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cinemática · Guía de estudio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <p class="eyebrow">Física · 1º Bachillerato</p>
+    <h1>Cinemática</h1>
+    <p class="subtitle">El estudio del movimiento: posición, velocidad y aceleración.</p>
+    <nav class="toc">
+      <a href="#fundamentos">1. Fundamentos</a>
+      <a href="#posicion">2. Posición y desplazamiento</a>
+      <a href="#velocidad">3. Velocidad</a>
+      <a href="#aceleracion">4. Aceleración</a>
+      <a href="#componentes">5. Componentes intrínsecas</a>
+      <a href="#formulas">6. Fórmulas</a>
+      <a href="#examen">7. Examen</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+<!-- ===================== 1. FUNDAMENTOS ===================== -->
+<section id="fundamentos" class="card">
+  <h2><span class="num">1</span> Los 3 elementos fundamentales</h2>
+  <p>Para empezar a estudiar el movimiento necesitamos tres elementos:</p>
+
+  <div class="grid three">
+    <div class="concept">
+      <div class="icon-box">
+        <svg viewBox="0 0 100 100" class="illus">
+          <circle cx="50" cy="50" r="18" fill="#ff6b6b"/>
+          <circle cx="50" cy="50" r="6" fill="#fff"/>
+          <path d="M 20 80 Q 50 70 80 80" stroke="#333" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
+        </svg>
+      </div>
+      <h3>Móvil</h3>
+      <p>El <strong>objeto</strong> que se mueve.</p>
+    </div>
+
+    <div class="concept">
+      <div class="icon-box">
+        <svg viewBox="0 0 100 100" class="illus">
+          <path d="M 10 70 Q 40 10 90 50" stroke="#4dabf7" stroke-width="3" fill="none"/>
+          <circle cx="10" cy="70" r="4" fill="#4dabf7"/>
+          <circle cx="90" cy="50" r="4" fill="#4dabf7"/>
+        </svg>
+      </div>
+      <h3>Trayectoria</h3>
+      <p>La <strong>línea</strong> descrita por el móvil durante su movimiento.</p>
+    </div>
+
+    <div class="concept">
+      <div class="icon-box">
+        <svg viewBox="0 0 100 100" class="illus">
+          <rect x="10" y="40" width="80" height="20" fill="#e9ecef" rx="3"/>
+          <text x="50" y="55" text-anchor="middle" font-size="12" fill="#495057">t = 0,1,2...</text>
+        </svg>
+      </div>
+      <h3>Tiempo</h3>
+      <p>El movimiento es el <strong>cambio de posición respecto al tiempo</strong>.</p>
+    </div>
+  </div>
+
+  <h3 class="subhead">Tipos de movimiento según la trayectoria</h3>
+  <div class="grid two">
+    <div class="concept tight">
+      <svg viewBox="0 0 200 60" class="illus wide">
+        <line x1="10" y1="30" x2="190" y2="30" stroke="#51cf66" stroke-width="3"/>
+        <circle cx="10" cy="30" r="5" fill="#51cf66"/>
+        <polygon points="185,25 195,30 185,35" fill="#51cf66"/>
+      </svg>
+      <h4>Recta → rectilíneo</h4>
+    </div>
+    <div class="concept tight">
+      <svg viewBox="0 0 200 60" class="illus wide">
+        <path d="M 10 50 Q 100 -10 190 50" stroke="#ff922b" stroke-width="3" fill="none"/>
+        <circle cx="10" cy="50" r="5" fill="#ff922b"/>
+        <polygon points="185,45 195,50 184,55" fill="#ff922b"/>
+      </svg>
+      <h4>Curva → curvilíneo</h4>
+    </div>
+  </div>
+
+  <div class="note">
+    <strong>Importante:</strong> El movimiento es el cambio de posición de un móvil durante un cierto tiempo, pero con respecto a un <em>sistema de referencia</em>. Por lo tanto, <strong>no hay movimiento absoluto, solo relativo</strong>.
+  </div>
+</section>
+
+<!-- ===================== 2. POSICIÓN ===================== -->
+<section id="posicion" class="card">
+  <h2><span class="num">2</span> Posición, desplazamiento y espacio recorrido</h2>
+
+  <div class="concept block">
+    <h3>Posición</h3>
+    <p>Es el <strong>lugar que ocupa el móvil</strong> sobre la trayectoria. Coordenadas cartesianas <code>(x, y, z)</code>.</p>
+
+    <h3>Vector de posición (<span class="vec">r</span>)</h3>
+    <p>Es aquel vector que nos da la posición del móvil instantáneamente. Su <strong>extremo coincide siempre con la posición del móvil</strong>, y su <strong>punto de aplicación con el origen</strong> del sistema de referencia.</p>
+
+    <svg viewBox="0 0 300 220" class="illus big">
+      <!-- ejes -->
+      <line x1="40" y1="180" x2="280" y2="180" stroke="#adb5bd" stroke-width="1.5"/>
+      <line x1="40" y1="180" x2="40" y2="20" stroke="#adb5bd" stroke-width="1.5"/>
+      <polygon points="280,180 273,176 273,184" fill="#adb5bd"/>
+      <polygon points="40,20 36,27 44,27" fill="#adb5bd"/>
+      <text x="285" y="184" font-size="11" fill="#495057">x</text>
+      <text x="32" y="20" font-size="11" fill="#495057">y</text>
+      <text x="30" y="195" font-size="11" fill="#495057">O</text>
+      <!-- trayectoria -->
+      <path d="M 60 170 Q 150 40 260 100" stroke="#dee2e6" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+      <!-- vector r -->
+      <line x1="40" y1="180" x2="180" y2="80" stroke="#e03131" stroke-width="2.5"/>
+      <polygon points="180,80 170,82 175,90" fill="#e03131"/>
+      <circle cx="180" cy="80" r="5" fill="#e03131"/>
+      <!-- r vector label with arrow above -->
+      <line x1="96" y1="118" x2="118" y2="118" stroke="#e03131" stroke-width="1.5"/>
+      <polygon points="120,118 115,116 115,120" fill="#e03131"/>
+      <text x="100" y="132" font-size="16" font-style="italic" fill="#e03131" font-weight="bold">r</text>
+      <text x="186" y="76" font-size="11" fill="#495057">P(x, y)</text>
+    </svg>
+  </div>
+
+  <div class="concept block">
+    <h3>Desplazamiento</h3>
+    <p>El <strong>desplazamiento entre dos posiciones</strong> es la <strong>línea recta</strong> que une dichas posiciones. Es un vector → <strong><span class="vec wide">ΔL</span></strong>.</p>
+
+    <h3>Espacio recorrido</h3>
+    <p>El espacio recorrido entre dos posiciones es la <strong>longitud real</strong> sobre la trayectoria entre dichas posiciones.</p>
+
+    <svg viewBox="0 0 320 200" class="illus big">
+      <!-- trayectoria curva -->
+      <path d="M 40 160 Q 100 30 180 90 T 290 120" stroke="#4dabf7" stroke-width="3" fill="none"/>
+      <text x="80" y="50" font-size="12" fill="#1971c2" font-weight="600">espacio recorrido (s)</text>
+      <!-- desplazamiento -->
+      <line x1="40" y1="160" x2="290" y2="120" stroke="#e03131" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <polygon points="290,120 280,118 282,127" fill="#e03131"/>
+      <!-- desplazamiento label with overarrow -->
+      <text x="140" y="155" font-size="12" fill="#e03131" font-weight="600">desplazamiento</text>
+      <line x1="232" y1="146" x2="260" y2="146" stroke="#e03131" stroke-width="1.4"/>
+      <polygon points="262,146 257,144 257,148" fill="#e03131"/>
+      <text x="232" y="156" font-size="12" font-style="italic" fill="#e03131" font-weight="600">ΔL</text>
+      <!-- puntos -->
+      <circle cx="40" cy="160" r="5" fill="#212529"/>
+      <text x="22" y="175" font-size="11">A</text>
+      <circle cx="290" cy="120" r="5" fill="#212529"/>
+      <text x="295" y="125" font-size="11">B</text>
+    </svg>
+  </div>
+</section>
+
+<!-- ===================== 3. VELOCIDAD ===================== -->
+<section id="velocidad" class="card">
+  <h2><span class="num">3</span> Velocidad</h2>
+  <p class="lead">La velocidad es aquella <strong>magnitud vectorial</strong> que mide la <strong>rapidez de los cambios de posición</strong> de un móvil.</p>
+
+  <div class="grid two">
+    <div class="concept block">
+      <h3>Velocidad media (<span class="vec">v</span><sub>m</sub>)</h3>
+      <p>Es aquella que <strong>relaciona el espacio recorrido</strong> con el tiempo empleado.</p>
+      <div class="formula">
+        <span class="vec">v</span><sub>m</sub> = <span class="frac"><span class="num">Δx</span><span class="den">Δt</span></span> = <span class="frac"><span class="num">x<sub>f</sub> − x<sub>0</sub></span><span class="den">t<sub>f</sub> − t<sub>0</sub></span></span>
+      </div>
+    </div>
+
+    <div class="concept block">
+      <h3>Velocidad instantánea (<span class="vec">v</span><sub>i</sub>)</h3>
+      <p>Es la <strong>velocidad de un móvil en cada instante</strong> de tiempo.</p>
+      <svg viewBox="0 0 240 140" class="illus">
+        <path d="M 20 110 Q 100 -10 220 80" stroke="#dee2e6" stroke-width="2" fill="none"/>
+        <circle cx="120" cy="40" r="6" fill="#e03131"/>
+        <line x1="120" y1="40" x2="200" y2="30" stroke="#e03131" stroke-width="2.5"/>
+        <polygon points="200,30 191,27 192,36" fill="#e03131"/>
+        <!-- label -->
+        <line x1="160" y1="13" x2="178" y2="13" stroke="#e03131" stroke-width="1.4"/>
+        <polygon points="180,13 175,11 175,15" fill="#e03131"/>
+        <text x="160" y="25" font-size="13" font-style="italic" fill="#e03131" font-weight="bold">v</text>
+        <text x="172" y="25" font-size="11" fill="#e03131">(tangente)</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 4. ACELERACIÓN ===================== -->
+<section id="aceleracion" class="card">
+  <h2><span class="num">4</span> Aceleración</h2>
+  <p class="lead">La aceleración es aquella <strong>magnitud vectorial</strong> que mide la <strong>rapidez de los cambios de la velocidad</strong> de un móvil.</p>
+
+  <div class="grid two">
+    <div class="concept block">
+      <h3>Aceleración media (<span class="vec">a</span><sub>m</sub>)</h3>
+      <p>Es aquella aceleración que relaciona el <strong>cambio de velocidad</strong> con el tiempo empleado.</p>
+      <div class="formula">
+        <span class="vec">a</span><sub>m</sub> = <span class="frac"><span class="num">Δ<span class="vec">v</span></span><span class="den">Δt</span></span>
+      </div>
+    </div>
+
+    <div class="concept block">
+      <h3>Aceleración instantánea</h3>
+      <p>La que posee el móvil en <strong>cada instante</strong> de tiempo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 5. COMPONENTES INTRÍNSECAS ===================== -->
+<section id="componentes" class="card">
+  <h2><span class="num">5</span> Componentes intrínsecas de la aceleración</h2>
+
+  <div class="concept block">
+    <h3>Aceleración tangencial (<span class="vec">a</span><sub>t</sub>)</h3>
+    <p>Es aquella componente que <strong>mide los cambios del módulo</strong> de la velocidad. Su <strong>dirección es tangente</strong> a la trayectoria en cada punto, y su <strong>sentido</strong>:</p>
+    <ul>
+      <li><strong>Coincide</strong> con la velocidad si la velocidad <em>aumenta</em>.</li>
+      <li><strong>Es contrario</strong> si la velocidad <em>disminuye</em>.</li>
+    </ul>
+  </div>
+
+  <div class="concept block">
+    <h3>Aceleración centrípeta (<span class="vec">a</span><sub>c</sub>)</h3>
+    <p>Es aquella componente que <strong>mide los cambios de la dirección</strong> de la velocidad. Su <strong>dirección es perpendicular</strong> a la trayectoria en cada punto, y su <strong>sentido hacia el centro de la curva</strong>.</p>
+  </div>
+
+  <svg viewBox="0 0 360 240" class="illus big">
+    <!-- círculo trayectoria -->
+    <circle cx="180" cy="130" r="80" stroke="#dee2e6" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+    <circle cx="180" cy="130" r="3" fill="#868e96"/>
+    <text x="186" y="135" font-size="11" fill="#495057">centro</text>
+    <!-- móvil arriba -->
+    <circle cx="180" cy="50" r="7" fill="#212529"/>
+    <!-- velocidad tangente -->
+    <line x1="180" y1="50" x2="270" y2="50" stroke="#1971c2" stroke-width="3"/>
+    <polygon points="270,50 260,46 260,54" fill="#1971c2"/>
+    <line x1="232" y1="32" x2="250" y2="32" stroke="#1971c2" stroke-width="1.4"/>
+    <polygon points="252,32 247,30 247,34" fill="#1971c2"/>
+    <text x="232" y="44" font-size="14" font-style="italic" fill="#1971c2" font-weight="bold">v</text>
+    <!-- aceleración tangencial (en sentido del movimiento, más corta, encima del vector v) -->
+    <line x1="180" y1="68" x2="240" y2="68" stroke="#37b24d" stroke-width="3"/>
+    <polygon points="240,68 232,65 232,71" fill="#37b24d"/>
+    <line x1="200" y1="84" x2="218" y2="84" stroke="#37b24d" stroke-width="1.4"/>
+    <polygon points="220,84 215,82 215,86" fill="#37b24d"/>
+    <text x="200" y="96" font-size="13" font-style="italic" fill="#37b24d" font-weight="bold">a</text>
+    <text x="210" y="100" font-size="10" fill="#37b24d" font-weight="bold">t</text>
+    <!-- aceleración centrípeta (hacia el centro) -->
+    <line x1="180" y1="50" x2="180" y2="120" stroke="#e03131" stroke-width="3"/>
+    <polygon points="180,120 176,112 184,112" fill="#e03131"/>
+    <line x1="190" y1="80" x2="208" y2="80" stroke="#e03131" stroke-width="1.4"/>
+    <polygon points="210,80 205,78 205,82" fill="#e03131"/>
+    <text x="190" y="92" font-size="13" font-style="italic" fill="#e03131" font-weight="bold">a</text>
+    <text x="200" y="96" font-size="10" fill="#e03131" font-weight="bold">c</text>
+  </svg>
+</section>
+
+<!-- ===================== 6. FÓRMULAS ===================== -->
+<section id="formulas" class="card formulas-section">
+  <h2><span class="num">6</span> Fórmulas clave</h2>
+  <div class="grid two">
+    <div class="formula-card">
+      <h4>Velocidad</h4>
+      <div class="formula big"><span class="vec">v</span> = <span class="frac"><span class="num">d</span><span class="den">t</span></span></div>
+    </div>
+    <div class="formula-card">
+      <h4>Velocidad media</h4>
+      <div class="formula big"><span class="vec">v</span><sub>m</sub> = <span class="frac"><span class="num">Δx</span><span class="den">Δt</span></span> = <span class="frac"><span class="num">x<sub>f</sub> − x<sub>0</sub></span><span class="den">t<sub>f</sub> − t<sub>0</sub></span></span></div>
+    </div>
+    <div class="formula-card">
+      <h4>Aceleración media</h4>
+      <div class="formula big"><span class="vec">a</span><sub>m</sub> = <span class="frac"><span class="num">Δ<span class="vec">v</span></span><span class="den">Δt</span></span></div>
+    </div>
+    <div class="formula-card">
+      <h4>Aceleración centrípeta</h4>
+      <div class="formula big"><span class="vec">a</span><sub>c</sub> = <span class="frac"><span class="num">v<sup>2</sup></span><span class="den">R</span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 7. EXAMEN ===================== -->
+<section id="examen" class="card exam-section">
+  <h2><span class="num">7</span> Examen interactivo</h2>
+  <p>Pon a prueba lo que has aprendido. Tienes 10 preguntas.</p>
+
+  <div id="exam"></div>
+  <button id="submitBtn" class="btn primary">Corregir examen</button>
+  <button id="resetBtn" class="btn ghost">Reiniciar</button>
+
+  <div id="result" class="result hidden"></div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>Guía de estudio · Cinemática · Hecha para repasar tus apuntes.</p>
+  </div>
+</footer>
+
+<script src="exam.js"></script>
+</body>
+</html>
