@@ -60,12 +60,22 @@
     <div class="concept">
       <div class="icon-box">
         <svg viewBox="0 0 100 100" class="illus">
-          <rect x="10" y="40" width="80" height="20" fill="#e9ecef" rx="3"/>
-          <text x="50" y="55" text-anchor="middle" font-size="12" fill="#495057">t = 0,1,2...</text>
+          <!-- ejes del sistema de referencia -->
+          <line x1="20" y1="75" x2="85" y2="75" stroke="#495057" stroke-width="2"/>
+          <line x1="25" y1="85" x2="25" y2="20" stroke="#495057" stroke-width="2"/>
+          <polygon points="85,75 78,71 78,79" fill="#495057"/>
+          <polygon points="25,20 21,27 29,27" fill="#495057"/>
+          <text x="78" y="90" font-size="10" fill="#495057">x</text>
+          <text x="12" y="22" font-size="10" fill="#495057">y</text>
+          <text x="13" y="86" font-size="10" fill="#495057">O</text>
+          <!-- punto y vector -->
+          <line x1="25" y1="75" x2="65" y2="40" stroke="#e03131" stroke-width="2"/>
+          <polygon points="65,40 57,40 61,47" fill="#e03131"/>
+          <circle cx="65" cy="40" r="3" fill="#e03131"/>
         </svg>
       </div>
-      <h3>Tiempo</h3>
-      <p>El movimiento es el <strong>cambio de posición respecto al tiempo</strong>.</p>
+      <h3>Sistema de referencia</h3>
+      <p>El <strong>marco</strong> respecto al cual medimos las posiciones del móvil.</p>
     </div>
   </div>
 
@@ -90,7 +100,7 @@
   </div>
 
   <div class="note">
-    <strong>Importante:</strong> El movimiento es el cambio de posición de un móvil durante un cierto tiempo, pero con respecto a un <em>sistema de referencia</em>. Por lo tanto, <strong>no hay movimiento absoluto, solo relativo</strong>.
+    <strong>Importante:</strong> El movimiento es el cambio de posición de un móvil durante un cierto tiempo con respecto a un <em>sistema de referencia</em>. Por lo tanto, <strong>no hay movimiento absoluto, solo relativo</strong>.
   </div>
 </section>
 
@@ -129,24 +139,24 @@
   </div>
 
   <div class="concept block">
-    <h3>Desplazamiento</h3>
-    <p>El <strong>desplazamiento entre dos posiciones</strong> es la <strong>línea recta</strong> que une dichas posiciones. Es un vector → <strong><span class="vec wide">ΔL</span></strong>.</p>
+    <h3>Desplazamiento (<span class="vec">Δr</span>)</h3>
+    <p>El <strong>desplazamiento entre dos posiciones</strong> es la <strong>línea recta</strong> que une dichas posiciones. Es un vector → <strong><span class="vec">Δr</span></strong>.</p>
 
-    <h3>Espacio recorrido</h3>
-    <p>El espacio recorrido entre dos posiciones es la <strong>longitud real</strong> sobre la trayectoria entre dichas posiciones.</p>
+    <h3>Espacio recorrido (Δs)</h3>
+    <p>El espacio recorrido entre dos posiciones es la <strong>longitud real</strong> sobre la trayectoria entre dichas posiciones. Es un escalar → <strong>Δs</strong>.</p>
 
     <svg viewBox="0 0 320 200" class="illus big">
       <!-- trayectoria curva -->
       <path d="M 40 160 Q 100 30 180 90 T 290 120" stroke="#4dabf7" stroke-width="3" fill="none"/>
-      <text x="80" y="50" font-size="12" fill="#1971c2" font-weight="600">espacio recorrido (s)</text>
+      <text x="70" y="50" font-size="12" fill="#1971c2" font-weight="600">espacio recorrido Δs</text>
       <!-- desplazamiento -->
       <line x1="40" y1="160" x2="290" y2="120" stroke="#e03131" stroke-width="2.5" stroke-dasharray="6 4"/>
       <polygon points="290,120 280,118 282,127" fill="#e03131"/>
       <!-- desplazamiento label with overarrow -->
       <text x="140" y="155" font-size="12" fill="#e03131" font-weight="600">desplazamiento</text>
-      <line x1="232" y1="146" x2="260" y2="146" stroke="#e03131" stroke-width="1.4"/>
-      <polygon points="262,146 257,144 257,148" fill="#e03131"/>
-      <text x="232" y="156" font-size="12" font-style="italic" fill="#e03131" font-weight="600">ΔL</text>
+      <line x1="232" y1="146" x2="258" y2="146" stroke="#e03131" stroke-width="1.4"/>
+      <polygon points="260,146 255,144 255,148" fill="#e03131"/>
+      <text x="232" y="156" font-size="13" font-style="italic" fill="#e03131" font-weight="600">Δr</text>
       <!-- puntos -->
       <circle cx="40" cy="160" r="5" fill="#212529"/>
       <text x="22" y="175" font-size="11">A</text>
@@ -164,9 +174,9 @@
   <div class="grid two">
     <div class="concept block">
       <h3>Velocidad media (<span class="vec">v</span><sub>m</sub>)</h3>
-      <p>Es aquella que <strong>relaciona el espacio recorrido</strong> con el tiempo empleado.</p>
+      <p>Es aquella que <strong>relaciona el desplazamiento</strong> con el tiempo empleado.</p>
       <div class="formula">
-        <span class="vec">v</span><sub>m</sub> = <span class="frac"><span class="num">Δx</span><span class="den">Δt</span></span> = <span class="frac"><span class="num">x<sub>f</sub> − x<sub>0</sub></span><span class="den">t<sub>f</sub> − t<sub>0</sub></span></span>
+        <span class="vec">v</span><sub>m</sub> = <span class="frac"><span class="num"><span class="vec">Δr</span></span><span class="den">Δt</span></span> = <span class="frac"><span class="num"><span class="vec">r</span><sub>f</sub> − <span class="vec">r</span><sub>0</sub></span><span class="den">t<sub>f</sub> − t<sub>0</sub></span></span>
       </div>
     </div>
 
@@ -262,12 +272,12 @@
   <h2><span class="num">6</span> Fórmulas clave</h2>
   <div class="grid two">
     <div class="formula-card">
-      <h4>Velocidad</h4>
-      <div class="formula big"><span class="vec">v</span> = <span class="frac"><span class="num">d</span><span class="den">t</span></span></div>
+      <h4>Rapidez media (escalar)</h4>
+      <div class="formula big">v<sub>m</sub> = <span class="frac"><span class="num">Δs</span><span class="den">Δt</span></span></div>
     </div>
     <div class="formula-card">
-      <h4>Velocidad media</h4>
-      <div class="formula big"><span class="vec">v</span><sub>m</sub> = <span class="frac"><span class="num">Δx</span><span class="den">Δt</span></span> = <span class="frac"><span class="num">x<sub>f</sub> − x<sub>0</sub></span><span class="den">t<sub>f</sub> − t<sub>0</sub></span></span></div>
+      <h4>Velocidad media (vector)</h4>
+      <div class="formula big"><span class="vec">v</span><sub>m</sub> = <span class="frac"><span class="num"><span class="vec">Δr</span></span><span class="den">Δt</span></span> = <span class="frac"><span class="num"><span class="vec">r</span><sub>f</sub> − <span class="vec">r</span><sub>0</sub></span><span class="den">t<sub>f</sub> − t<sub>0</sub></span></span></div>
     </div>
     <div class="formula-card">
       <h4>Aceleración media</h4>

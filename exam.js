@@ -50,12 +50,12 @@ const questions = [
     q: "¿Cuál es la diferencia entre desplazamiento y espacio recorrido?",
     options: [
       "Son lo mismo, solo cambia el nombre",
-      `El desplazamiento es la línea recta entre dos posiciones (vector ${V('ΔL')}); el espacio recorrido es la longitud real sobre la trayectoria`,
+      `El desplazamiento ${V('Δr')} es la línea recta entre dos posiciones (vector); el espacio recorrido Δs es la longitud real sobre la trayectoria (escalar)`,
       "El espacio recorrido es siempre menor que el desplazamiento",
       "El desplazamiento es un escalar y el espacio recorrido un vector"
     ],
     correct: 1,
-    explain: `Desplazamiento ${V('ΔL')} = línea recta entre A y B (vector). Espacio recorrido = longitud real sobre la trayectoria curva.`
+    explain: `Desplazamiento ${V('Δr')} = línea recta entre A y B (vector). Espacio recorrido Δs = longitud real sobre la trayectoria curva (escalar).`
   },
   {
     q: "¿Cómo se define la velocidad?",
@@ -69,15 +69,15 @@ const questions = [
     explain: "La velocidad es una magnitud VECTORIAL que mide la rapidez con la que cambia la posición de un móvil."
   },
   {
-    q: "¿Qué fórmula corresponde a la velocidad media?",
+    q: "¿Qué fórmula corresponde a la velocidad media (vector)?",
     options: [
       `${VS('v','m')} = v² / R`,
       `${VS('v','m')} = Δ${V('v')} / Δt`,
-      `${VS('v','m')} = Δx / Δt = (x<sub>f</sub> − x<sub>0</sub>) / (t<sub>f</sub> − t<sub>0</sub>)`,
-      `${VS('v','m')} = d · t`
+      `${VS('v','m')} = ${V('Δr')} / Δt`,
+      `${VS('v','m')} = Δs · Δt`
     ],
     correct: 2,
-    explain: "La velocidad media relaciona el cambio de posición Δx con el tiempo empleado Δt."
+    explain: `La velocidad media (vectorial) relaciona el desplazamiento ${V('Δr')} con el tiempo empleado Δt. Si se usa el espacio recorrido Δs (escalar), se habla de rapidez media: v<sub>m</sub> = Δs/Δt.`
   },
   {
     q: "¿Qué dirección tiene siempre la velocidad instantánea en un punto de la trayectoria?",
